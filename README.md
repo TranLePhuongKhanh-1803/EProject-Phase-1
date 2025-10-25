@@ -207,7 +207,7 @@ Sau khi hệ thống đã chạy, bạn có thể dùng Postman để kiểm tra
     {
         "products": [
             {
-                "productId": "DÁN_ID_SẢN_PHẨM_VỪA_TẠO_Ở_TRÊN_VÀO_ĐÂY"
+                "ids": "DÁN_ID_SẢN_PHẨM_VỪA_TẠO_Ở_TRÊN_VÀO_ĐÂY"
 
             }
         ]
