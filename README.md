@@ -185,7 +185,7 @@ Sau khi hệ thống đã chạy, bạn có thể dùng Postman để kiểm tra
 
 ### 3. Tạo sản phẩm mới
 * **Method**: `POST`
-* **URL**: `http://localhost:3000/products/api/products`
+* **URL**: `http://localhost:3003/products/api/products`
 * **Authorization**: Chọn `Bearer Token` và dán `token` đã copy ở bước 2.
 * **Body** (`raw`, `JSON`):
     ```json
@@ -200,15 +200,14 @@ Sau khi hệ thống đã chạy, bạn có thể dùng Postman để kiểm tra
 
 ### 4. Tạo đơn hàng mới
 * **Method**: `POST`
-* **URL**: `http://localhost:3000/orders/create` (Lưu ý: đường dẫn này có thể khác tùy theo code của bạn)
+* **URL**: `http://localhost:3003/products/api/products/buy` (Lưu ý: đường dẫn này có thể khác tùy theo code của bạn)
 * **Authorization**: Tiếp tục dùng `Bearer Token`.
 * **Body** (`raw`, `JSON`):
     ```json
     {
         "products": [
             {
-                "productId": "DÁN_ID_SẢN_PHẨM_VỪA_TẠO_Ở_TRÊN_VÀO_ĐÂY",
-                "quantity": 1
+                "ids":" dán id sản phẩm đã tạo vào đây"
             }
         ]
     }
