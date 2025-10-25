@@ -195,7 +195,7 @@ Sau khi hệ thống đã chạy, bạn có thể dùng Postman để kiểm tra
         "price": 25990000
     }
     ```
-   ![Postman Test](./public/results/themSP.png)
+   ![Postman Test](./public/results/themSp.png)
 * **Kết quả**: Copy lại giá trị `_id` của sản phẩm vừa tạo.
 
 ### 4. Tạo đơn hàng mới
