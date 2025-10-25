@@ -1,0 +1,63 @@
+services:
+  api-gateway:
+    build: ./api-gateway
+    container_name: api-gateway
+    ports:
+      - "3003:3003"
+    environment:
+      PORT: 3003
+      JWT_SECRET: 123
+    depends_on:
+      - auth
+      - product
+      - order
+
+  auth:
+    build: ./auth
+    container_name: auth
+    ports:
+      - "3000:3000"
+    env_file: ./auth/.env
+    depends_on:
+      - mongodb
+
+  product:
+    build: ./product
+    container_name: product
+    ports:
+      - "3001:3001"
+    env_file: ./product/.env
+    depends_on:
+      - mongodb
+      - rabbitmq
+
+  order:
+    build: ./order
+    container_name: order
+    ports:
+      - "3002:3002"
+    environment:  # THÊM VÀO ĐÂY - QUAN TRỌNG!
+      - RABBITMQ_URI=amqp://guest:guest@rabbitmq:5672
+      - MONGODB_ORDER_URI=mongodb://mongodb:27017/order-service
+    env_file: ./order/.env
+    depends_on:
+      - mongodb
+      - rabbitmq
+
+  mongodb:
+    image: mongo:latest
+    container_name: mongodb
+    ports:
+      - "27018:27017"
+    volumes:
+      - mongo_data:/data/db
+
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: rabbitmq
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+
+volumes:
+  mongo_data:
