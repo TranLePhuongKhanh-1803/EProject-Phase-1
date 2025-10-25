@@ -167,7 +167,7 @@ Sau khi hệ thống đã chạy, bạn có thể dùng Postman để kiểm tra
     }
     Example:
     ```
-
+![Postman Test](./public/results/register.png)
 ### 2. Đăng nhập
 * **Method**: `POST`
 * **URL**: `http://localhost:3000/login`
@@ -179,7 +179,7 @@ Sau khi hệ thống đã chạy, bạn có thể dùng Postman để kiểm tra
     }
     Ecample:
     ```
-
+![Postman Test](./public/results/login.png)
 
 * **Kết quả**: Copy lại giá trị `token` từ response để sử dụng cho các request tiếp theo.
 
@@ -195,7 +195,7 @@ Sau khi hệ thống đã chạy, bạn có thể dùng Postman để kiểm tra
         "price": 25990000
     }
     ```
-   
+   ![Postman Test](./public/results/themSP.png)
 * **Kết quả**: Copy lại giá trị `_id` của sản phẩm vừa tạo.
 
 ### 4. Tạo đơn hàng mới
@@ -212,4 +212,5 @@ Sau khi hệ thống đã chạy, bạn có thể dùng Postman để kiểm tra
         ]
     }
     ```
+    ![Postman Test](./public/results/order.png)
 ---
