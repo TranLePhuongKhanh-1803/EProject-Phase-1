@@ -207,7 +207,9 @@ Sau khi hệ thống đã chạy, bạn có thể dùng Postman để kiểm tra
     {
         "products": [
             {
+
                 "ids":" dán id sản phẩm đã tạo vào đây"
+
             }
         ]
     }
